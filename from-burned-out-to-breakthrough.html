@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light only" />
+<meta name="supported-color-schemes" content="light" />
+<title>From Burned Out to Breakthrough | Live Training with Dr. Minda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    color-scheme: light only;
+    --purple:#672CB0;
+    --purple-deep:#3d1a7a;
+    --gold:#C9A84C;
+    --cream:#FBF8F2;
+    --ink:#2a2140;
+    --display:'Cormorant Garamond', Georgia, serif;
+    --body:'Jost', system-ui, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;
+    background-color:#FBF8F2;
+    color:#2a2140;
+  }
+  body{
+    font-family:var(--body);
+    color:#2a2140;
+    background-color:#FBF8F2;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* Force light on all browsers / in-app webviews */
+  @media (prefers-color-scheme: dark) {
+    html { background-color:#FBF8F2 !important; color:#2a2140 !important; }
+    body { background-color:#FBF8F2 !important; color:#2a2140 !important; }
+    section { background-color:#FBF8F2 !important; }
+    h2 { color:#3d1a7a !important; }
+    .lede { color:#2a2140 !important; }
+    .eyebrow { color:#672CB0 !important; }
+    .section-title { color:#3d1a7a !important; }
+    .takeaways li { background-color:#ffffff !important; }
+    .takeaways b { color:#3d1a7a !important; }
+    .takeaways div { color:#2a2140 !important; }
+    .offers { background: linear-gradient(180deg,#ffffff,#f4eefb) !important; }
+    .card { background-color:#ffffff !important; }
+    .card p { color:#2a2140 !important; }
+    .card h3 { color:#3d1a7a !important; }
+    .card .price { color:#672CB0 !important; }
+    .card .zero { color:#C9A84C !important; }
+    .was-price { color:#aaa !important; }
+    .host .name { color:#3d1a7a !important; }
+    .host .role { color:#C9A84C !important; }
+    .host p { color:#2a2140 !important; }
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    background:linear-gradient(160deg, #3d1a7a 0%, #672CB0 55%, #8a4ad0 100%) !important;
+    color:#fff;
+    padding:64px 24px 72px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;left:50%;bottom:34px;transform:translateX(-50%);
+    width:180px;height:3px;border-radius:3px;
+    background:linear-gradient(90deg,transparent,#C9A84C,transparent);
+  }
+  .logo{
+    font-family:var(--display);
+    font-weight:600;
+    letter-spacing:.5px;
+    color:#C9A84C;
+    font-size:1.35rem;
+    margin-bottom:8px;
+  }
+  .logo span{font-style:italic;font-weight:500;}
+  .tagline-top{
+    font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;
+    color:rgba(255,255,255,.7);margin-bottom:38px;
+  }
+  .badge{
+    display:inline-block;border:1px solid rgba(201,168,76,.55);color:#C9A84C;
+    font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;
+    padding:8px 18px;border-radius:30px;margin-bottom:24px;
+  }
+  .hero h1{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2.4rem,7vw,4.1rem);
+    line-height:1.04;
+    max-width:760px;margin:0 auto 14px;
+    color:#fff;
+  }
+  .hero h1 em{color:#C9A84C;font-style:italic;}
+  .subhead{
+    font-size:clamp(1rem,2.4vw,1.25rem);
+    font-weight:300;max-width:600px;margin:0 auto 30px;color:rgba(255,255,255,.92);
+  }
+  .when{
+    display:flex;gap:28px;justify-content:center;flex-wrap:wrap;
+    font-size:.95rem;letter-spacing:.04em;margin-bottom:34px;
+    color:#fff;
+  }
+  .when b{display:block;font-family:var(--display);font-size:1.5rem;color:#C9A84C;font-weight:600;}
+  .btn{
+    display:inline-block;font-family:var(--body);font-weight:600;
+    letter-spacing:.04em;text-decoration:none;cursor:pointer;border:none;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn-gold{
+    background:#C9A84C;color:#3a2c08;
+    padding:18px 44px;border-radius:40px;font-size:1.05rem;
+    box-shadow:0 12px 30px rgba(201,168,76,.35);
+  }
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(201,168,76,.45);}
+  .micro{font-size:.8rem;color:rgba(255,255,255,.65);margin-top:14px;}
+
+  /* SECTIONS */
+  section{
+    padding:62px 24px;
+    background-color:#FBF8F2;
+    color:#2a2140;
+  }
+  .wrap{max-width:820px;margin:0 auto;}
+
+  /* EYEBROW: bolder and more visible across all sections */
+  .eyebrow{
+    text-align:center;
+    font-size:.82rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:#672CB0;
+    margin-bottom:10px;
+    font-weight:700;
+  }
+
+  /* SECTION TITLE: larger, bold, visible heading below eyebrow */
+  .section-title{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(1.5rem,4vw,2rem);
+    color:#3d1a7a;
+    text-align:center;
+    margin-bottom:24px;
+    letter-spacing:.01em;
+  }
+
+  h2{
+    font-family:var(--display);font-weight:600;text-align:center;
+    font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.1;color:#3d1a7a;
+    margin-bottom:34px;
+  }
+  .lede{
+    text-align:center;font-size:1.12rem;font-weight:300;
+    max-width:640px;margin:0 auto 30px;
+    color:#2a2140;
+  }
+
+  /* WALK AWAY LIST */
+  .takeaways{list-style:none;max-width:640px;margin:0 auto;}
+  .takeaways li{
+    display:flex;gap:16px;align-items:flex-start;
+    padding:18px 22px;margin-bottom:14px;
+    background-color:#ffffff;
+    border-radius:14px;border:1px solid rgba(103,44,176,.1);
+    box-shadow:0 6px 18px rgba(61,26,122,.05);
+    color:#2a2140;
+  }
+  .takeaways .mark{
+    flex-shrink:0;width:30px;height:30px;border-radius:50%;
+    background-color:#672CB0;color:#C9A84C;
+    display:flex;align-items:center;justify-content:center;font-size:.9rem;margin-top:2px;
+  }
+  .takeaways b{font-weight:600;color:#3d1a7a;}
+
+  /* OFFER CARDS */
+  .offers{
+    background:linear-gradient(180deg,#ffffff,#f4eefb) !important;
+    color:#2a2140;
+  }
+  .cards{display:grid;grid-template-columns:1fr;gap:22px;max-width:760px;margin:0 auto;}
+  @media(min-width:760px){.cards{grid-template-columns:1fr 1fr 1fr;align-items:stretch;}}
+  .card{
+    background-color:#ffffff;border-radius:18px;padding:30px 24px;text-align:center;
+    border:1px solid rgba(103,44,176,.12);display:flex;flex-direction:column;
+    box-shadow:0 10px 30px rgba(61,26,122,.07);
+    color:#2a2140;
+  }
+  .card.feature{border:2px solid #C9A84C;position:relative;}
+  .card.feature::before{
+    content:"Most Popular";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:#C9A84C;color:#3a2c08;font-size:.62rem;letter-spacing:.18em;
+    text-transform:uppercase;font-weight:600;padding:5px 16px;border-radius:20px;white-space:nowrap;
+  }
+  .was-price{
+    font-size:.85rem;
+    font-weight:400;
+    color:#aaaaaa;
+    text-decoration:line-through;
+    text-decoration-thickness:2px;
+    margin-bottom:2px;
+    font-family:var(--body);
+    letter-spacing:.02em;
+  }
+  .card .price{
+    font-family:var(--display);font-size:2.4rem;font-weight:700;
+    color:#672CB0;line-height:1;margin:4px 0 6px;
+  }
+  .card .zero{
+    color:#C9A84C;
+    font-size:2.6rem;
+  }
+  .today-note{
+    font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+    color:#672CB0;font-weight:600;margin-bottom:14px;
+  }
+  .card h3{font-family:var(--display);font-size:1.4rem;color:#3d1a7a;margin-bottom:10px;font-weight:600;}
+  .card p{font-size:.92rem;font-weight:300;flex-grow:1;margin-bottom:22px;color:#2a2140;}
+  .btn-purple{
+    background:#672CB0;color:#ffffff;padding:13px 22px;border-radius:34px;
+    font-size:.92rem;width:100%;display:block;text-align:center;
+  }
+  .btn-purple:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(103,44,176,.3);}
+
+  /* HOST */
+  .host{text-align:center;background-color:#FBF8F2;}
+  .host .name{font-family:var(--display);font-size:2rem;color:#3d1a7a;font-weight:700;}
+  .host .role{
+    font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+    color:#C9A84C;margin-bottom:20px;font-weight:600;
+  }
+  .host p{max-width:600px;margin:0 auto 16px;font-weight:300;color:#2a2140;}
+  .quote-block{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:1.3rem;font-style:italic;color:#672CB0;
+    max-width:580px;margin:0 auto;
+  }
+  .quote-attr{
+    display:block;margin-top:10px;
+    font-family:var(--body);font-size:.82rem;font-style:normal;
+    font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#3d1a7a;
+  }
+
+  /* FINAL CTA */
+  .final{
+    background:linear-gradient(160deg,#672CB0 0%, #3d1a7a 100%) !important;
+    color:#fff;text-align:center;
+  }
+  .final h2{color:#fff !important;}
+  .final .lede{color:rgba(255,255,255,.9) !important;}
+
+  /* FOOTER */
+  footer{
+    background-color:#3d1a7a;color:rgba(255,255,255,.6);
+    text-align:center;padding:30px 24px;font-size:.82rem;
+    line-height:1.8;
+  }
+  footer .ft-logo{font-family:var(--display);color:#C9A84C;font-size:1.1rem;font-style:italic;margin-bottom:8px;}
+  footer .legal{
+    font-size:.72rem;color:rgba(255,255,255,.45);
+    max-width:680px;margin:16px auto 0;
+    line-height:1.7;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="logo"><span>Joy</span> in Her Journey</div>
+    <div class="tagline-top">Pivot with Power. Lead with Joy.</div>
+    <div class="badge">Live Training</div>
+    <h1>From Burned Out to <em>Breakthrough</em></h1>
+    <p class="subhead">My story, and your permission slip. A live training for the accomplished woman who is quietly wondering what's next.</p>
+    <div class="when">
+      <div>Sunday<b>May 31</b></div>
+      <div>Live on Zoom<b>7:00 PM ET</b></div>
+    </div>
+    <a href="https://us06web.zoom.us/meeting/register/U1IxSeuMRhCAf-XtKtvSog" class="btn btn-gold">Reserve My Seat</a>
+    <p class="micro">$0 to attend. Limited live seats. Replay not guaranteed.</p>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Why I built this</p>
+      <p class="section-title">Why Do You Still Feel Stuck?</p>
+      <p class="lede">You're brilliant, credentialed, and respected. And yet a quiet voice keeps asking whether this is really it. That voice is not a problem to silence. It's a doorway. In one hour, I'm going to walk you through exactly how I moved from burned out to a breakthrough, while still honoring everything I built.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;background-color:#FBF8F2;">
+    <div class="wrap">
+      <p class="eyebrow">What you walk away with</p>
+      <ul class="takeaways">
+        <li><span class="mark">&#10003;</span><div><b>The real reason you're still stuck</b> despite doing everything you were told to do.</div></li>
+        <li><span class="mark">&#10003;</span><div><b>The mindset shift</b> that made my pivot possible, and gave me permission to move.</div></li>
+        <li><span class="mark">&#10003;</span><div><b>The exact framework</b> I use with clients to move from burnout into clarity, confidence, and joy.</div></li>
+        <li><span class="mark">&#10003;</span><div><b>Your clear next step</b>, if you're the woman who is finally done waiting.</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="offers">
+    <div class="wrap">
+      <p class="eyebrow">Choose your experience</p>
+      <h2>Start with $0. Go deeper if you're ready.</h2>
+      <div class="cards">
+
+        <div class="card">
+          <h3>The Live Training</h3>
+          <div class="was-price">Normally $249</div>
+          <div class="price zero">$0</div>
+          <p class="today-note">Tonight only</p>
+          <p>One hour of strategy, story, and a framework that changes how you see your next chapter. Live with me on Zoom.</p>
+          <a href="https://us06web.zoom.us/meeting/register/U1IxSeuMRhCAf-XtKtvSog" class="btn btn-purple">Reserve My Seat</a>
+        </div>
+
+        <div class="card feature">
+          <h3>VIP Strategy Room</h3>
+          <div class="was-price">Normally $150</div>
+          <div class="price">$47</div>
+          <p>Exclusive access to a private strategy session with Dr. Minda immediately following the live training. Deeper gems, live Q&amp;A, and your specific questions answered. This is where the real work happens.</p>
+          <a href="https://book.stripe.com/4gM3cu5SJ5gT3ef7Qf5kk05" class="btn btn-purple">Upgrade to VIP</a>
+        </div>
+
+        <div class="card">
+          <h3>Pivot Readiness Assessment</h3>
+          <div class="price">$27</div>
+          <p>Walk in already knowing where you stand. A guided self assessment that shows you exactly how ready you are to pivot, and what to do first.</p>
+          <a href="https://buy.stripe.com/4gMfZg94V4cP0236Mb5kk06" class="btn btn-purple">Add the Assessment</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="host">
+    <div class="wrap">
+      <p class="eyebrow">Your Guide</p>
+      <p class="section-title">Dr. Minda Reed</p>
+      <div class="role">The Joy and Pivot Coach</div>
+      <p>A physician and public health leader turned strategic leadership elevation coach, Dr. Minda helps high achieving, mission driven women turn burnout and fear into clarity, confidence, and joy.</p>
+      <p class="quote-block">
+        "Where other coaches give women wings, I give them a flight plan."
+        <span class="quote-attr">— Dr. Minda</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>You weren't built to burn out. You were built to break through.</h2>
+      <p class="lede">Come as you are. Leave with a plan.</p>
+      <a href="https://us06web.zoom.us/meeting/register/U1IxSeuMRhCAf-XtKtvSog" class="btn btn-gold">Reserve My Seat</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="ft-logo">Joy in Her Journey</div>
+    Pivot with Power. Lead with Joy.<br />
+    &copy; 2026 Joy in Her Journey, LLC. All rights reserved.
+    <div class="legal">
+      The content, frameworks, methodologies, and materials presented in this training and on this page, including but not limited to the PIVOT framework, the Joy in Her Journey coaching system, and all associated intellectual property, are the exclusive property of Joy in Her Journey, LLC and Dr. Minda Reed. Unauthorized reproduction, distribution, or use of any content from this training is strictly prohibited. Results discussed are not guaranteed and are based on individual effort, circumstances, and other factors. This training is for educational and informational purposes only and does not constitute professional medical, legal, or financial advice. By registering you agree to receive communications from Joy in Her Journey, LLC. You may unsubscribe at any time.
+    </div>
+  </footer>
+
+</body>
+</html>
